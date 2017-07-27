@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
     private String mUsername;
     public static final String ANONYMOUS = "anonymous";
-    Button button;
+    Button parentLoginButton;
+    Button childLoginButton;
+    Button newUserButton;
 
     private FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -38,16 +40,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Locate the button in activity_main.xml
-        button = (Button) findViewById(R.id.LoggedInParent);
+        parentLoginButton = (Button) findViewById(R.id.loggedInParent);
+        childLoginButton = (Button) findViewById(R.id.loggedInChild);
+        newUserButton = (Button) findViewById(R.id.newUser);
 
-        // Capture button clicks
-        button.setOnClickListener(new android.view.View.OnClickListener() {
+        // Capture button clicks (simulating initial login for each user type)
+        parentLoginButton.setOnClickListener(new android.view.View.OnClickListener() {
             public void onClick(View arg0) {
-
                 // Start NewActivity.class
                 Intent myIntent = new Intent(MainActivity.this,
                         ParentLoggedIn.class);
                 startActivity(myIntent);
+            }
+        });
+        childLoginButton.setOnClickListener(new android.view.View.OnClickListener(){
+            public void onClick (View view){
+                Intent childIntent = new Intent(MainActivity.this, ChildLoggedIn.class);
+                startActivity(childIntent);
+            }
+        });
+        newUserButton.setOnClickListener(new android.view.View.OnClickListener(){
+            public void onClick (View view){
+                Intent newUserIntent = new Intent(MainActivity.this, NewUser.class);
+                startActivity(newUserIntent);
             }
         });
 

@@ -15,11 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ParentLogin"
-            android:label="@string/title_activity_parent_login"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ParentLoggedIn" />
+        <activity android:name=".ChildLoggedIn" />
+        <activity android:name=".NewUser" />
+        <activity android:name=".NewUserChild"/>
+        <activity android:name=".NewUserParent"/>
+        <activity android:name=".NewUserParentCar"/>
+
         <activity
             android:name=".dummyActivity"
             android:label="@string/title_activity_dummy"

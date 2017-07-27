@@ -17,11 +17,29 @@
         android:id="@+id/textView" />
 
     <Button
-        android:text="LoggedInParent"
+        android:id="@+id/loggedInParent"
+        android:text="Logged In Parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:id="@+id/LoggedInParent" />
+        android:layout_marginTop="156dp" />
+
+    <Button
+        android:id="@+id/loggedInChild"
+        android:text="Logged In Child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loggedInParent"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/newUser"
+        android:text="New User Setup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loggedInChild"
+        android:layout_centerHorizontal="true"/>
+
+
 </RelativeLayout>
