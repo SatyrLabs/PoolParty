@@ -15,6 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ParentLogin"
+            android:label="@string/title_activity_parent_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ParentLoggedIn" />
+        <activity
+            android:name=".dummyActivity"
+            android:label="@string/title_activity_dummy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CreateGroupActivity" />
+        <activity
+            android:name=".JoinTeamActivity"
+            android:label="@string/title_activity_join_team"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
