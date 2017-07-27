@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "981239154794",
+    "firebase_url": "https://poolparty-fdf13.firebaseio.com",
+    "project_id": "poolparty-fdf13",
+    "storage_bucket": "poolparty-fdf13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981239154794:android:91f6e35b95547381",
+        "android_client_info": {
+          "package_name": "com.example.sisyphus.thepoolparty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981239154794-t7l7hrpa1lv1hadu09tu1sms5t32uivt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sisyphus.thepoolparty",
+            "certificate_hash": "30c5c032f0abbed4d1b56059f8c19aabf01b279b"
+          }
+        },
+        {
+          "client_id": "981239154794-2tp3d4ouhidmgbqmlkc6h863ruit0jgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIbGrCsX8uBkfZaQ59A-i3_xm4sRkI2C0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981239154794-2tp3d4ouhidmgbqmlkc6h863ruit0jgp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
