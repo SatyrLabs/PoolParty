@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parent_logged_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sisyphus.thepoolparty.ParentLoggedIn">
+
+    <Button
+        android:text="Create Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="135dp"
+        android:id="@+id/createPoolGroup" />
+
+    <Button
+        android:text="Join Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/joingPoolGroup"
+        android:layout_below="@+id/viewPoolGroup"
+        android:layout_alignLeft="@+id/viewPoolGroup"
+        android:layout_alignStart="@+id/viewPoolGroup" />
+
+    <Button
+        android:text="View Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPoolGroup"
+        android:layout_below="@+id/createPoolGroup"
+        android:layout_alignLeft="@+id/createPoolGroup"
+        android:layout_alignStart="@+id/createPoolGroup"
+        android:layout_marginTop="17dp" />
+
+    <Button
+        android:text="My Kids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/joingPoolGroup"
+        android:layout_alignLeft="@+id/joingPoolGroup"
+        android:layout_alignStart="@+id/joingPoolGroup"
+        android:layout_marginTop="18dp"
+        android:id="@+id/myKids" />
+</RelativeLayout>
