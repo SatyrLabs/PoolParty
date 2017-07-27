@@ -3,4 +3,5 @@
     <string name="title_activity_parent_login">ParentLogin</string>
     <string name="title_activity_dummy">dummyActivity</string>
     <string name="title_activity_join_team">JoinTeamActivity</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
