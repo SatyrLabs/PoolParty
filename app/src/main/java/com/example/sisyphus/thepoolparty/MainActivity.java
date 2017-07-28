@@ -12,11 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import static com.example.sisyphus.thepoolparty.R.styleable.View;
-
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Arrays;
 
@@ -28,10 +28,20 @@ public class MainActivity extends AppCompatActivity {
     Button childLoginButton;
     Button newUserButton;
 
+    //Test button for Firebase
+    Button firebaseDataTest;
+
+
+    private DatabaseReference mDatabase;
+
     private FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     public static final int RC_SIGN_IN = 1;  //request code
+
+    public String userEmail;
+    public String userId;
+    public String userName;
 
 
     @Override
@@ -43,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
         parentLoginButton = (Button) findViewById(R.id.loggedInParent);
         childLoginButton = (Button) findViewById(R.id.loggedInChild);
         newUserButton = (Button) findViewById(R.id.newUser);
+
+        //Initialize test button for firebase database
+        firebaseDataTest = (Button) findViewById(R.id.dataTestButton);
+
 
         // Capture button clicks (simulating initial login for each user type)
         parentLoginButton.setOnClickListener(new android.view.View.OnClickListener() {
@@ -66,6 +80,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Get an instance of DatabaseReference
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        //Test button
+        firebaseDataTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = userName;
+                String email = userEmail;
+
+                User user = new User(name, email);
+                //Create child in root object and assign value
+                mDatabase.child("users").child(userId).setValue(user);
+            }
+        });
+
+
+
+
+
         //Initialize the authentication object and state listener
         mFirebaseAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -76,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                 if (user != null){
                     //user is signed in
                     onSignedInInitialize(user.getDisplayName());
+                    userEmail = user.getEmail();
+                    userId = user.getUid();
+                    userName = user.getDisplayName();
 
                 } else{
                     //user is signed out

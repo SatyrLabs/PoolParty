@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 /**
  * Created by mhigh on 7/27/2017.
  */
@@ -32,6 +35,7 @@ public class NewUser extends AppCompatActivity {
                 //Send intent to parent setup
                 Intent parentIntent = new Intent(NewUser.this, NewUserParent.class);
                 startActivity(parentIntent);
+
             }
         });
 
