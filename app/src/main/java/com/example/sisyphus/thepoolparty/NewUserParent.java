@@ -31,6 +31,5 @@ public class NewUserParent extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

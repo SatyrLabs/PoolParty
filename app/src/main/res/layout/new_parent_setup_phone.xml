@@ -4,23 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:src="@drawable/goats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <EditText
-        android:id="@+id/childNameEditText"
+        android:id="@+id/newParentPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:hint="Full Name"/>
+        android:hint="000-000-0000"
+        android:inputType="phone"
+        android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/childNameAndImageOk"
+        android:id="@+id/newParentPhoneOk"
+        android:text="Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Ok"/>
+        android:layout_gravity="center"/>
 
 </LinearLayout>

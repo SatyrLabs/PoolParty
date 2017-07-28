@@ -10,27 +10,26 @@ import android.widget.Button;
  * Created by mhigh on 7/27/2017.
  */
 
-public class NewUserParentCar extends AppCompatActivity {
+public class NewUserParentPhone extends AppCompatActivity {
 
-    Button carImageOk;
+    Button phoneOk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_parent_setup_car);
-        carImageOk();
+        setContentView(R.layout.new_parent_setup_phone);
+        phoneOk();
     }
 
-    private void carImageOk(){
-        carImageOk = (Button) findViewById(R.id.carImageAndOk);
+    private void phoneOk(){
+        phoneOk = (Button) findViewById(R.id.newParentPhoneOk);
 
-        carImageOk.setOnClickListener(new View.OnClickListener(){
+        phoneOk.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Intent intent = new Intent(NewUserParentCar.this, NewUserParentPhone.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(NewUserParentPhone.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-
     }
 }

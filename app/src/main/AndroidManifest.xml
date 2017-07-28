@@ -21,6 +21,7 @@
         <activity android:name=".NewUserChild"/>
         <activity android:name=".NewUserParent"/>
         <activity android:name=".NewUserParentCar"/>
+        <activity android:name=".NewUserParentPhone"/>
 
         <activity
             android:name=".dummyActivity"
