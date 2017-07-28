@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 User user = new User(name, email);
                 //Create child in root object and assign value
                 mDatabase.child("users").child(userId).setValue(user);
+                //TODO: when this is pressed after the user is already established in a group, it deletes their group data.  Will self correct when we move this addition to the login, not a button
             }
         });
 

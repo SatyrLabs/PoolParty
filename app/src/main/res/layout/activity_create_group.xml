@@ -26,16 +26,8 @@
         android:hint="Group Name"
         android:layout_below="@+id/createGroupNameLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
-
-    <EditText
-        android:id = "@+id/createGroupPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint ="Group Password"
-        android:layout_marginTop="90dp"
-        android:layout_below="@+id/createGroupName"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="32dp"
+        android:inputType="text"/>
 
     <TextView
         android:text="Team Password"
@@ -44,6 +36,18 @@
         android:id="@+id/textView3"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id = "@+id/createGroupPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint ="Group Password"
+        android:layout_marginTop="90dp"
+        android:layout_below="@+id/createGroupName"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"/>
+
+
 
     <Button
         android:id="@+id/createNewGroupButton"
