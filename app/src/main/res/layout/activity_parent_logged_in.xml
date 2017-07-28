@@ -33,7 +33,7 @@
         android:layout_alignStart="@+id/viewPoolGroup" />
 
     <Button
-        android:text="View Group"
+        android:text="View Groups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/viewPoolGroup"
